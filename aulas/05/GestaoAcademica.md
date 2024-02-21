@@ -44,6 +44,14 @@ A transição do modelo conceitual para o modelo lógico envolve a representaç�
 
 Tabelas:
 (listar)
+-Curso: ID(PK), Nome
+-Aluno: ID(PK), Nome
+-Professor: ID(PK), Nome 
+-Disciplina: ID(PK,), Nome, ID_CURSO(FK)
+-Disciplina_Professor: ID_PROFESSOR(FK), ID_DISCIPLINA(FK)
+-Matrícula ID_ALUNO, ID_CURSO(FK)
+
+Disciplina Professor
 
 Chaves Primárias e Estrangeiras:
 (listar)
