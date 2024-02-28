@@ -64,3 +64,14 @@ WHERE Curso_ID = 2;
 SELECT *
 FROM professor
 WHERE Especializacao LIKE '%Tecnologia%';
+
+-- Exercício: Selecione todos os cursos que terminem com 'medicina' ou comecem com a letra 'D'
+SELECT *
+FROM curso
+WHERE Nome LIKE '%medicina' OR Nome LIKE 'D%';
+
+-- Utilizando o DISTINCT para obter valores distintos
+SELECT DISTINCT Especializacao FROM professor;
+
+
+
