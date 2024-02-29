@@ -22,7 +22,7 @@ INSERT INTO Estado (Nome, UF) VALUES
     ('São Paulo', 'SP'),
     ('Bahia', 'BA');
     
-SELECT * FROM CIDADE
+SELECT * FROM ESTADO;
 
 INSERT INTO CIDADE (Nome, ID_Estado) VALUES
 	('Barueri', 2),
@@ -30,9 +30,16 @@ INSERT INTO CIDADE (Nome, ID_Estado) VALUES
     ('Niteroi', 1),
     ('Feira de Santana', 3);
     
-INSERT INTO CIDADE (Nome, ID_EsTADO) VALUES
+INSERT INTO CIDADE (Nome, ID_Estado) VALUES
 	('Sydney', NULL),
     ('Melbourne', NULL),
     ('Springfild', NULL);
-	
+    
+-- -----------------------
+-- CONSULTAS SQL COM JOINs
+-- -----------------------
+
+SELECT Cidade.id, Cidade.nome, Estado.Nome AS nome_estado, Estado.UF as uf
+FROM CIDADE
+INNER JOIN ESTADO ON CIDADE.ID_Estado = ESTADO.ID;
 
